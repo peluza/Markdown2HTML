@@ -16,7 +16,7 @@ def markdownhtml():
     else:
         file_start = sys.argv[1]
         file_out = sys.argv[2]
-        if os.path.isfile_start(file_start):
+        if os.path.isfile(file_start):
             sys.exit(0)
         else:
             print("Missing {}".format(file_start), file_start=sys.stderr)
