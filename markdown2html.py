@@ -8,12 +8,12 @@ import os
 def markdownhtml():
     """ that takes an argument 2 strings
     """
+    filename = sys.argv[1]
+    output = sys.argv[2]
     if len(sys.argv) < 2:
         print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
         sys.exit(1)
     else:
-        filename = sys.argv[1]
-        output = sys.argv[2]
         if os.path.isfile(filename):
                 sys.exit(0)
         else:
