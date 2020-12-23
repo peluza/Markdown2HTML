@@ -5,20 +5,23 @@
 import sys
 import os
 
+
 def markdownhtml():
     """ that takes an argument 2 strings
     """
-    filename = sys.argv[1]
-    output = sys.argv[2]
     if len(sys.argv) < 2:
-        print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
+        print("Usage: ./markdown2html.py README.md README.html",
+              file_start=sys.stderr)
         sys.exit(1)
     else:
-        if os.path.isfile(filename):
-                sys.exit(0)
+        file_start = sys.argv[1]
+        file_out = sys.argv[2]
+        if os.path.isfile_start(file_start):
+            sys.exit(0)
         else:
-            print("Missing {}".format(filename), file=sys.stderr)
+            print("Missing {}".format(file_start), file_start=sys.stderr)
             sys.exit(1)
+
 
 if __name__ == "__main__":
     markdownhtml()
