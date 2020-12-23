@@ -11,7 +11,7 @@ def markdownhtml():
     """
     if len(sys.argv) < 2:
         print("Usage: ./markdown2html.py README.md README.html",
-              file_start=sys.stderr)
+              file=sys.stderr)
         sys.exit(1)
     else:
         file_start = sys.argv[1]
@@ -19,7 +19,7 @@ def markdownhtml():
         if os.path.isfile(file_start):
             sys.exit(0)
         else:
-            print("Missing {}".format(file_start), file_start=sys.stderr)
+            print("Missing {}".format(file_start), file=sys.stderr)
             sys.exit(1)
 
 
